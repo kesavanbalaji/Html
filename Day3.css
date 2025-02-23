@@ -1,0 +1,18 @@
+h1::before{
+    content: 'Yo!! ';
+}
+h2::after{
+    content: 'See Yahh!! ';
+}
+li::marker{
+    color: aqua;
+}
+*::selection{
+    color: blanchedalmond;
+}
+h3::first-letter{
+    background-color: aqua;
+}
+h4::first-line{
+    background-color: aqua;
+}
