@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coin game</title>
+</head>
+
+<body>
+    <button onclick="
+        playerMove = 'heads';
+        computerMove(playerMove);">Head</button>
+    <button onclick="
+        playerMove = 'tails';
+        computerMove(playerMove);">Tail</button>
+    <p></p>
+    <script>
+        let playerMove = '';
+        let coin = '';
+        let ran = '';
+        function computerMove(m) {
+            ran = Math.random()
+            if (ran >= 0 && ran <= 0.5) {
+                coin = 'heads';
+                console.log(coin)
+            } else {
+                coin = 'tails';
+                console.log(coin)
+            }
+
+            let result = m === coin?'You Win !':'You Lose ';
+            document.querySelector('p').innerHTML = `${result}`;
+            
+        }
+
+
+
+    </script>
+</body>
+
+</html>

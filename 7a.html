@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>7a</title>
+    </head>
+    <body>
+        <script>
+            // function greet(name='there'){
+            //     /*if (!name){
+            //         console.log('hi there!')
+            //     }else {
+            //         console.log(`hi ${name}!`);
+            //     }*/
+            //     console.log(`Hi ${name}!`)
+            // }
+            // greet();
+
+            // function celToFah(no){
+            //     let fahrenheit = (no * 9/5) + 32;
+            //     console.log(fahrenheit);
+            // }
+            // celToFah(25);
+
+            // function fahToCel(no){
+            //     let celsius = (no - 32) * 5/9;
+            //     console.log(celsius);
+            // }
+            // fahToCel(86);
+
+            // function both(a,b){
+            //     if (b === 'f'){
+            //         let celsius = (a - 32) * 5/9;
+            //         console.log(celsius+ 'c');
+            //     }else{
+            //         let fahrenheit = (a * 9/5) + 32;
+            //         console.log(fahrenheit + 'f');
+            //     }
+            // }
+            // both(25,'c');
+            // both(86,'f')
+
+            function convertLength(no,a,b){
+
+                if (a !== 'km' && a !== 'miles' && a !== 'ft') {
+                    return `Invalid unit: ${a}`;
+                } else if (b !== 'km' && b !== 'miles' && b !== 'ft') {
+                    return `Invalid unit: ${b}`;
+                }
+                if (a === b){
+                    return `${no} ${a}`;
+                }else if(a === 'km'){
+                    if (b === 'miles'){
+                        let kToM = no/1.6;
+                        return `${kToM} ${b}`;
+                    }else if(b === 'ft'){
+                        let kToM = no * 3281;
+                        return `${kToM} ${b}`;
+                    }
+                }else if (a === 'miles'){
+                    if (b === 'km'){
+                        let kToM = no * 1.6;
+                        return `${kToM} ${b}`;
+                    }else if(b === 'ft'){
+                        let kToM = no * 5280;
+                        return `${kToM} ${b}`;
+                    }
+                }else if(a === 'ft'){
+                    if (b === 'km'){
+                        let kToM = no / 3281;
+                        return `${kToM} ${b}`;
+                    }else if (b === 'miles'){
+                        let kToM = no / 5280;
+                        return `${kToM} ${b}`;
+                    }
+                }
+
+            }
+            convertLength(26400,'ft','miles');
+
+
+
+
+
+        </script>
+    </body>
+</html>
