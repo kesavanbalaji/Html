@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+        /*const product = {
+            name : 'socks',
+            price: 1090
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.price = 100;
+        console.log(product);
+
+        product.place = 'shop';
+        console.log(product);
+
+        delete product.place;
+        console.log(product);
+
+
+        // product = {};
+        // console.log(product);
+        
+
+        let hi = 'hi';
+        const product = {
+            name : 'keshav',
+            age : 21,
+            details : 'Committed',
+            fun : function function1(){
+                console.log(`hi`)
+
+            },
+            'Gender': 'Male',
+            ['Girlfriend']: 'yes',
+            rating: {
+                stars: ['hi','hello']
+            },
+
+        };
+
+        //converting object into JSON
+        console.log(product.rating.stars);
+        const json = JSON.stringify(product);
+        console.log(json);
+
+        //converting JSON into JSON Object
+        const jsonObject = JSON.parse(json);
+        console.log(jsonObject);*/
+
+
+        /*destructuring
+        const product2 = {
+            name: 'apple',
+            price: 238
+        };
+        let {name,price} = product2;
+        console.log(name,price);
+
+        let json = JSON.stringify(product2);
+        console.log(json);
+
+        let jsonObject = JSON.parse(json);
+        console.log(jsonObject);
+        console.log(jsonObject.name);*/
+
+
+
+        /*Short hand property
+        const product2 = {
+            name: 'apple',
+            price: 238
+        };
+        let {name,price} = product2;
+        console.log(name,price);
+        const object3 = {
+            // name: name
+            name
+        }
+        console.log(object3.name)*/
+
+        //short hand method
+
+        const product = {
+            message: 'hello',
+            // func: function(){
+            //     console.log('hi');
+            // }
+
+            func(){
+                console.log('hi');
+            }
+        };
+        product.func();
+
+
+    </script>
+</body>
+
+</html>
