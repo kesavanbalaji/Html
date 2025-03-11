@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="
+        display();">
+        
+    <p></p>
+    <script>
+        function display() {
+            let values = document.querySelector('input').value;
+            document.querySelector('p').innerHTML = `${values}`
+        }
+
+        let a = 10;
+        // if (a % 2 === 0){
+        //     console.log('Divisible');
+        // }else {
+        //     console.log('not');
+        // }
+
+        let suck = a % 2 === 0? 'Divisible': 'not';
+        console.log(suck)
+    </script>
+</body>
+</html>

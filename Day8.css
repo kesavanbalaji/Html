@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#outer{
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    height: 450px;
+    width: 450px;
+    align-content: center;
+    /* padding: 100px; */
+    padding: 80px;
+} 
+.inner{
+    box-sizing: content-box;
+    height: 275px;
+    width: 275px;
+    border: 2px solid brown;
+    background-color: brown;
+    border-radius: 20px;
+}

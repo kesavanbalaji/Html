@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+</head>
+
+<body>
+    <!-- <button onclick="
+        console.log(document.querySelector('button'));">hello</button>
+
+    <button onclick="
+    document.querySelector('.js-button').innerHTML = '9b done!';" class="js-button">9b</button>
+
+    <br> -->
+
+    <button id="js-button3" onclick="
+    resultDisplay('head');">heads</button>
+    <button id="js-button4" onclick="
+    resultDisplay('tails');">tails</button>
+    <p></p>
+
+    <hr>
+    <input type="text" placeholder="Name" onkeydown="
+    if (event.key === 'Enter'){
+        displayWhenEnter();
+    }
+    ">
+
+    <button type="submit" onclick="
+    const userName = document.querySelector('input').value;
+    displayName(userName);">Submit</button>
+    <p class="js-para"></p>
+
+    <script>
+        function displayWhenEnter() {
+            let values = document.querySelector('input').value;
+            document.querySelector('.js-para').innerHTML = `Your name is:${values}`;
+        }
+
+
+        function displayName(name) {
+            document.querySelector('.js-para').innerHTML = `Your name is : ${name}`;
+        }
+
+        function resultDisplay(choice) {
+            document.querySelector('p').innerHTML = `You chose: ${choice}`;
+        }
+    </script>
+</body>
+
+</html>
