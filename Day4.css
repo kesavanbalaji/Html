@@ -1,4 +1,4 @@
-h1{
+/* h1{ */
     /* text-align: center; */
     /* text-align: end; */
     /* text-align: start; */
@@ -17,11 +17,40 @@ h1{
     /* text-transform: uppercase; */
     /* text-transform: lowercase; */
 
-    /* text-shadow: 10px 10px 5px blue; */
+    /* text-shadow: 20px 20px 5px blue; */
 
     /* letter-spacing: 10px; */
 
     /* word-spacing: 10px; */
 
     /* line-height: 2; */
+/* } */
+
+*{
+    justify-content: center;
+}
+
+#outer{
+    display: flex;
+    /* flex-direction: row; */
+    background-color: aqua;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    /* align-items: baseline; */
+    /* align-items: center; */
+    align-content: space-between;
+    /* overflow: scroll; */
+    height: 700px;
+}
+
+
+#outer>div{
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
