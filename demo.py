@@ -40,8 +40,22 @@
 d = {
     'name': 'keshav',
     'age': 21
-}
+} 
 # c= {}
 # c = d.copy()
 # print(c)
 
+# print(d.get('name'))
+# print(d.keys())
+# print(d.values())
+# print(d.pop('name'))
+# print(d)
+# print(d.popitem())
+# print(d.popitem())
+
+
+print(d.setdefault('hi','hello'))
+print(d)
+print(d.update(hi='hii'))
+print(d.pop('hi'))
+print(d)
