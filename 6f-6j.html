@@ -9,34 +9,29 @@
 
 <body>
     <button onclick="
-        playerMove = 'heads';
-        computerMove(playerMove);">Head</button>
+        computerMove('heads');">Head</button>
     <button onclick="
-        playerMove = 'tails';
-        computerMove(playerMove);">Tail</button>
+        computerMove('tails');">Tail</button>
     <p></p>
     <script>
-        let playerMove = '';
-        let coin = '';
-        let ran = '';
-        function computerMove(m) {
-            ran = Math.random()
-            if (ran >= 0 && ran <= 0.5) {
-                coin = 'heads';
-                console.log(coin)
-            } else {
-                coin = 'tails';
-                console.log(coin)
-            }
+    const score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+    };
+    function computerMove(guess){
+        const ran = Math.random();
+        const result = ran < 0.5 ? 'heads' : 'tails';
 
-            let result = m === coin?'You Win !':'You Lose ';
-            document.querySelector('p').innerHTML = `${result}`;
-            
+        console.log(guess === result ? 'You Win !' : 'You Lose !');
+        if (guess === result) {
+            score.wins++;
+        } else {
+            score.losses++;
         }
-
-
-
+        console.log(score);
+        localStorage.setItem('score', JSON.stringify(score));
+    }
+    // document.querySelector('p').innerHTML = `Wins:${score.wins} Losses: ${score.losses}`;
     </script>
 </body>
-
 </html>

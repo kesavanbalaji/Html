@@ -49,20 +49,27 @@
         <button onclick="
             calculate('.');">.</button>
         <button onclick="
-            console.log(eval(calculation));">=</button>
+            console.log(eval(calculation));
+            saveCalculation();">=</button>
         <button onclick="
             calculate('/');">/</button>
     </p>
 
     <p>
         <button onclick="
-            calculation = '';">clear</button>
+            calculation = '';
+            localStorage.removeItem('calculation');">clear</button>
     </p>
     <script>
-        let calculation = '';
+        let calculation = localStorage.getItem('calculation') || '';
         function calculate(value){
             calculation += value;
+            saveCalculation();
             console.log(calculation)
+        }
+
+        function saveCalculation(){
+            localStorage.setItem('calculation', calculation);
         }
     </script>
 </body>
