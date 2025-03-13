@@ -49,7 +49,7 @@
         <button onclick="
             calculate('.');">.</button>
         <button onclick="
-            console.log(eval(calculation));
+        document.querySelector('.js-para1').innerHTML = `${eval(calculation)}`;
             saveCalculation();">=</button>
         <button onclick="
             calculate('/');">/</button>
@@ -58,14 +58,17 @@
     <p>
         <button onclick="
             calculation = '';
-            localStorage.removeItem('calculation');">clear</button>
+            localStorage.removeItem('calculation');
+            document.querySelector('.js-para1').innerHTML = `${calculation}`;">clear</button>
     </p>
+    <p class="js-para1"></p>
     <script>
         let calculation = localStorage.getItem('calculation') || '';
+        document.querySelector('.js-para1').innerHTML = `${calculation}`;
         function calculate(value){
             calculation += value;
             saveCalculation();
-            console.log(calculation)
+            document.querySelector('.js-para1').innerHTML = `${calculation}`;
         }
 
         function saveCalculation(){
