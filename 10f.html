@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .off{
+            background-color: black;
+            border: none;
+            padding: 15px;
+            width: 100px;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .on{
+            background-color: rgb(230,230,230);
+            border: none;
+            padding: 15px;
+            width: 100px;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="off" id="button-1" onclick="onButton('button-1');">Gaming</button>
+    <button class="off" id="button-2" onclick="onButton('button-2');">Music</button>
+    <button class="off" id="button-3" onclick="onButton('button-3');">Tech</button>
+    <script>
+    
+        function onButton(id){
+            const button = document.querySelector(`#${id}`);
+            if (!button.classList.contains('on')){
+                removePrevious();
+                button.classList.add('on');
+                // document.querySelector('.on').innerHTML = 'Off';
+            }else{
+                button.classList.remove('on');
+                // document.querySelectorAll('.off').innerHTML = 'On';
+                
+            }
+        }
+        function removePrevious(){
+            const previousButton = document.querySelector('.on');
+            if(previousButton){
+                previousButton.classList.remove('on');
+                // document.querySelector('.off').innerHTML = 'On';
+            }
+        }
+        // document.querySelectorAll('.off').innerHTML = 'On';
+    </script>
+</body>
+</html>

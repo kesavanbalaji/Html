@@ -5,61 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
 </head>
 
 <body>
-    <h2>Calculator</h2>
     <p>
         <button onclick="
-        calculate('1');">1</button>
+        calculate('1');" class="calculation">1</button>
         <button onclick="
-            calculate('2');">2</button>
+            calculate('2');" class="calculation">2</button>
         <button onclick="
-            calculate('3');">3</button>
+            calculate('3');" class="calculation">3</button>
         <button onclick="
-            calculate('+');">+</button>
+            calculate('+');" class="calculation orange-button">+</button>
     </p>
 
     <p>
         <button onclick="
-            calculate('4');">4</button>
+            calculate('4');" class="calculation">4</button>
         <button onclick="
-            calculate('5');">5</button>
+            calculate('5');" class="calculation">5</button>
         <button onclick="
-            calculate('6');">6</button>
+            calculate('6');" class="calculation">6</button>
         <button onclick="
-            calculate('-');">-</button>
+            calculate('-');" class="calculation orange-button">-</button>
     </p>
 
     <p>
         <button onclick="
-            calculate('7');">7</button>
+            calculate('7');" class="calculation">7</button>
         <button onclick="
-            calculate('8');">8</button>
+            calculate('8');" class="calculation">8</button>
         <button onclick="
             calculation += 9;
-            console.log(calculation)">9</button>
+            console.log(calculation)" class="calculation">9</button>
         <button onclick="
-            calculate('*');">*</button>
+            calculate('*');" class="calculation orange-button">*</button>
     </p>
 
     <p>
         <button onclick="
-            calculate('0');">0</button>
+            calculate('0');" class="calculation">0</button>
         <button onclick="
-            calculate('.');">.</button>
+            calculate('.');" class="calculation">.</button>
         <button onclick="
         document.querySelector('.js-para1').innerHTML = `${eval(calculation)}`;
-            saveCalculation();">=</button>
+            saveCalculation();" class="calculation">=</button>
         <button onclick="
-            calculate('/');">/</button>
+            calculate('/');" class="calculation orange-button">/</button>
     </p>
 
     <p>
         <button onclick="
             calculation = '';
             localStorage.removeItem('calculation');
-            document.querySelector('.js-para1').innerHTML = `${calculation}`;">clear</button>
+            document.querySelector('.js-para1').innerHTML = `${calculation}`;" class="calculation" id="clear-button">clear</button>
     </p>
     <p class="js-para1"></p>
     <script>
