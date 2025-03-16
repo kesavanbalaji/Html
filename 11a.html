@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const nums = [10, 20, 30];
+        // nums[2] = 99;
+        // console.log(nums);
+
+        // const array2 = ['hi', 'hello', 'good'];
+
+        // function getLastValue(arr){
+        //     console.log(arr[arr.length -1])
+        // }
+        // // getLastValue([1, 20, 22, 24, 5]);
+        // getLastValue(array2);
+        // // congetsole.log(getLastValue([1, 20, 22, 24, 5]));
+
+        // function arraySwap(arr){
+        //     const lastValue = arr[arr.length -1];
+        //     const firstValue = arr[0];
+        //     arr[0] = lastValue;
+        //     arr[arr.length-1] = firstValue;
+        //     return arr;
+        // }
+        // console.log(arraySwap(array2));
+        // let i = 0;
+        // for (let i=0;i<=10;i+=2){
+        //     console.log(i)
+        // }
+        // for (let i=5;i>=0;i--){
+        //     console.log(i)
+        // }
+
+        // let i= 0;
+        // while (i<=10){
+        //     console.log(i);
+        //     i += 2;
+        // }
+        // let j =5;
+        // while (j>=0){
+        //     console.log(j)
+        //     j--;
+        // }
+
+        // function addArray(arr_1) {
+        //     let i = 0;
+        //     let store_ = 0;
+        //     for (i; i < arr_1.length; i++) {
+        //         if (arr_1[i]>0){
+        //             store_++;
+        //         }
+        //     }
+        //     return store_
+        // }
+        // console.log(addArray([-2, -1, 0, 1, 2]));
+
+
+        // function minAndMax(array){
+        //     const dict = {
+        //         min : null,
+        //         max: null
+        //     }
+
+        //     for (let i=0; i < array.length; i++){
+
+        //         if (dict.min === null || dict.min > array[i]){
+        //             dict.min = array[i];
+        //         }
+        //         if (dict.max === null || dict.max < array[i]){
+        //             dict.max = array[i];
+        //         }
+        //     }
+        //     return dict;
+        // }
+
+        // console.log(minAndMax([2,4,1,5,12,-1]));
+
+
+
+        function countWords(words){
+            const result = {
+
+            };
+            for (let i = 0; i< words.length; i++){
+                let word = words[i];
+                if (!result[word]){
+                    result[word] = 1;
+                }else{
+                    result[word]+=1;
+                }
+            }
+            return result;
+        }
+       console.log(countWords(['apple','grape','orange','apple','grape','orange','pineapple']));
+        
+    </script>
+</body>
+
+</html>
