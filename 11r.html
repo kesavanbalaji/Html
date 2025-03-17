@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const array = ['plant', 'Egg', 'Food', 'shit'];
+        // let result = [];
+        // let fun = function(arr) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if(arr[i] === 'Egg'){
+        //             continue; 
+        //         }else{
+        //             result.push(arr[i]);
+        //         }
+        //     }
+        //     console.log(result);
+        // }
+        // fun(array);
+
+        // const arr = ['Egg', 'Apple', 'Egg', 'Egg', 'Ham'];
+        // let result = [];
+        // const reversedArr = arr.reverse();
+        // let removedEgg = 0;
+        // function removeEgg(array){
+        //     for (let i= 0; i<array.length;i++){
+        //         if (array[i] === 'Egg' && removedEgg<2){
+        //             removedEgg++;
+        //             continue;
+        //         }else{
+        //             result.push(array[i])
+        //         }
+        //     }
+        //     console.log(result.reverse())
+        // }
+        // removeEgg(reversedArr);
+        // console.log(arr);
+
+
+        /*function removeEgg(foods) {
+            // To remove the last 2 'egg', reverse the array first.
+            const reversedFoods = (foods.slice()).reverse();
+
+            const result = [];
+            let eggsRemoved = 0;
+
+            for (let i = 0; i < reversedFoods.length; i++) {
+                if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
+                    eggsRemoved++;
+                    continue;
+                }
+
+                result.push(reversedFoods[i]);
+            }
+
+            // At the end, remember to .reverse() back the result.
+            console.log(foods);
+            return result.reverse();
+        }
+
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));*/
+        // function fizzBuzz(){
+        //     for (let i = 1;i<=20;i++){
+        //         if (i%5 === 0 && i%3=== 0){
+        //             console.log('FizzBuzz');
+        //         }else if(i%5 === 0){
+        //             console.log('Buzz');
+        //         }else if(i%3 === 0){
+        //             console.log('Fizz');
+        //         }
+        //     }
+        // }
+        // fizzBuzz();
+
+        /*function findIndex(arr,w){
+            for(let i=0;i<arr.length;i++){
+                if (arr[i] === w){
+                    return 1;
+                }
+            }
+            return -1;
+        }
+
+        function unique(array){
+
+            let result = [];
+            for(let i= 0;i<array.length;i++){
+                let word = array[i];
+                if (findIndex(result,word)=== -1){
+                    result.push(array[i]);
+                }
+            }
+            return result;
+
+        }
+        console.log(unique(['green', 'red', 'blue', 'red']));
+        console.log(unique(['red', 'green', 'green', 'red']));*/
+    </script>
+</body>
+
+</html>
