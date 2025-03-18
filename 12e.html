@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button onclick="addToCart();">Add to cart</button>
+    <p class="js-para"></p>
+    <script>
+        let timeOutId;
+        function addToCart(){
+            let para = document.querySelector('.js-para');
+            para.innerHTML = 'Added';
+            clearTimeout(timeOutId);
+            timeOutId= setTimeout(function(){
+                para.innerHTML = '';
+            },2000)
+        }
+    </script>
+</body>
+</html>

@@ -6,8 +6,31 @@
     <title>Document</title>
 </head>
 <body>
+    <button class="js-button">Add</button>
     <script>
-        
+    //     const object2 = {
+    //         method(){
+    //             console.log('hello');
+    //         }
+    //     };
+    //     object2.method();
+
+    //     const jsonObj = JSON.stringify(object2);
+    //     console.log(object2);
+    //     console.log(jsonObj);
+    //     console.log(JSON.parse(jsonObj));
+    //     console.log(object2)
+    // //    console.log(jsonObj);
+    const func =() => {
+        console.log('hello');
+    }
+    const button = document.querySelector('.js-button');
+    button.addEventListener('click',func);
+    button.removeEventListener('click',func);
+    button.addEventListener('click',() => {
+        console.log('Hai');
+    });
+
     </script>
 </body>
 </html>

@@ -58,30 +58,17 @@
     <p class="title">
         Rock Paper Scissors
     </p>
-    <button onclick="
-    playerGame('rock');
-    " class="move-button"><img src="rock-emoji.png" alt="" class="move"></button>
+    <button class="move-button rock-button"><img src="rock-emoji.png" alt="" class="move"></button>
 
-    <button onclick="
-    playerGame('paper');
-    " class="move-button"><img src="paper-emoji.png" alt="" class="move"></button>
+    <button class="move-button paper-button"><img src="paper-emoji.png" alt="" class="move"></button>
 
-    <button onclick="
-    playerGame('scissors');
-    " class="move-button"><img src="scissors-emoji.png" alt="" class="move"></button>
+    <button class="move-button scissors-button"><img src="scissors-emoji.png" alt="" class="move"></button>
 
     <p class="js-result"></p>
     <p class="js-move"></p>
 
     <p class="js-score"></p>
-    <button onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-    " class="reset-button">Reset Score</button> <button class="auto-play-button" onclick="
-    autoPlay();">Auto Play</button>
+    <button class="reset-button js-reset-button">Reset Score</button> <button class="auto-play-button js-autoplay-button">Auto Play</button>
 
     <script>
         let score = JSON.parse(localStorage.getItem('score')) || {
@@ -102,10 +89,10 @@
         let isAutoPlaying = false;
         function autoPlay() {
             if (!isAutoPlaying) {
-                intervalId = setInterval(function () {
+                intervalId = setInterval(() => {
                     const autoPlayerMove = pickComputerMove();
                     playerGame(autoPlayerMove);
-                }, 2000);
+                }, 1000);
                 isAutoPlaying = true;
             } else {
                 clearInterval(intervalId);
@@ -176,6 +163,36 @@
             }
             return computerMove;
         }
+
+        document.querySelector('.rock-button').addEventListener('click', () => {
+            playerGame('rock');
+        });
+        document.querySelector('.paper-button').addEventListener('click', () => {
+            playerGame('paper');
+        });
+        document.querySelector('.scissors-button').addEventListener('click', () => {
+            playerGame('scissors');
+        });
+
+        document.body.addEventListener('keydown', (event) => {
+            if (event.key === 'r') {
+                playerGame('rock');
+            } else if (event.key === 'p') {
+                playerGame('paper');
+            } else if (event.key === 's') {
+                playerGame('scissors');
+            }
+        });
+        document.querySelector('.js-reset-button').addEventListener('click', () => {
+            score.wins = 0;
+            score.losses = 0;
+            score.ties = 0;
+            localStorage.removeItem('score');
+            updateScoreElement();
+        });
+        document.querySelector('.js-autoplay-button').addEventListener('click',() => {
+            autoPlay();
+        })
     </script>
 </body>
 

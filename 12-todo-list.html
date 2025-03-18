@@ -11,7 +11,7 @@
 <body>
     <div class="todo-input-grid">
         <input type="text" class="js-name-input name-input" placeholder="To Do Name"><input type="date" name="" id=""
-            class="js-due-date-input due-date-input"><button onclick="addToDo();" class="add-todo-button">Add</button>
+            class="js-due-date-input due-date-input"><button class="add-todo-button js-add-todo-button">Add</button>
     </div>
     <div class="js-todo-list todo-grid"></div>
 
@@ -27,7 +27,7 @@
         renderToDoList();
         function renderToDoList() {
             let toDoListHtml = '';
-            toDoList.forEach(function(toDoObject,i){
+            toDoList.forEach((toDoObject,i) => {
                 // const {name} = toDoObject;
                 const { name, dueDate } = toDoObject;
                 const html = `
@@ -35,11 +35,17 @@
                 <div>${dueDate}</div>
                 <button onclick="
                     toDoList.splice(${i},1);
-                    renderToDoList();" class="delete-todo-button">Delete</button>
+                    renderToDoList();" class="delete-todo-button js-delete-todo-button">Delete</button>
                 `;
                 toDoListHtml += html;
             });
             document.querySelector('.js-todo-list').innerHTML = toDoListHtml;
+            document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton,index)=>{
+                deleteButton.addEventListener('click',()=>{
+                    toDoList.splice(index,1);
+                    renderToDoList();
+                });
+            });
         }
         function addToDo() {
             const inputElement = document.querySelector('.js-name-input');
@@ -54,6 +60,10 @@
             inputElement.value = '';
             renderToDoList();
         }
+
+        document.querySelector('.js-add-todo-button').addEventListener('click',() => {
+            addToDo();
+        });
 
     </script>
 </body>
