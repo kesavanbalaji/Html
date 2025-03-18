@@ -8,11 +8,9 @@
 </head>
 
 <body>
-    <button class="js-button" onclick="updateButton('.js-button')">Start</button>
+    <button class="js-button">Start</button>
     <script>
-        const add = function addNumbers() {
-            console.log(2 + 3);
-        }
+        const add =()=>console.log(2 + 3);
         add();
 
         function runTwice(fun){
@@ -20,16 +18,19 @@
             fun();
         }
 
-        runTwice(function(){
+        runTwice(()=>{
             console.log('12b');
         });
         function updateButton(name){
             let button = document.querySelector(`${name}`)
             button.innerHTML = 'Loading...'
-            setTimeout(function(){
+            setTimeout(()=>{
                 button.innerHTML = 'Finished!';
             },2000);
         }
+        document.querySelector('.js-button').addEventListener('click',()=>{
+            updateButton('.js-button');
+        })
     </script>
 </body>
 

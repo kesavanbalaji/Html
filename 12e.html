@@ -6,7 +6,7 @@
     <title>App</title>
 </head>
 <body>
-    <button onclick="addToCart();">Add to cart</button>
+    <button class="js-add-tocart">Add to cart</button>
     <p class="js-para"></p>
     <script>
         let timeOutId;
@@ -14,10 +14,14 @@
             let para = document.querySelector('.js-para');
             para.innerHTML = 'Added';
             clearTimeout(timeOutId);
-            timeOutId= setTimeout(function(){
+            timeOutId= setTimeout(()=>{
                 para.innerHTML = '';
             },2000)
         }
+
+        document.querySelector('.js-add-tocart').addEventListener('click',()=>{
+            addToCart();
+        })
     </script>
 </body>
 </html>
